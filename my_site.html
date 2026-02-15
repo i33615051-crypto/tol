@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя Стена</title>
+</head>
+<body>
+
+    <!-- Блок входа/регистрации -->
+    <div id="auth-block">
+        <h2>Авторизация</h2>
+        <input type="text" id="user-login" placeholder="Логин">
+        <input type="password" id="user-pass" placeholder="Пароль">
+        <br><br>
+        <button onclick="auth('login')">Войти</button>
+        <button onclick="auth('register')">Регистрация</button>
+    </div>
+
+    <!-- Блок стены (скрыт до входа) -->
+    <div id="wall-block" style="display:none;">
+        <h2 id="greeting"></h2>
+        <button onclick="logout()">Выйти</button>
+        
+        <hr>
+        <h3>Сообщения на стене:</h3>
+        <div id="messages-list">Загрузка...</div>
+
+        <hr>
+        <textarea id="msg-text" placeholder="Напиши что-нибудь..."></textarea><br>
+        <button onclick="postMsg()">Опубликовать</button>
+    </div>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
